@@ -10,10 +10,10 @@ import { CountriesService } from '../../services/countries.service';
 export class ByRegionPageComponent {
   public countries : Country[] = [];
 
-  constructor(private CountriesService: CountriesService) {}
+  constructor(private countriesService: CountriesService) {}
 
   searchByRegion(term: string): void {
-    this.CountriesService.searchRegion(term)
+    this.countriesService.searchRegion(term)
       .subscribe(countries => {
         this.countries = countries;
       });
