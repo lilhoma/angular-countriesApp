@@ -8,10 +8,10 @@
       <tr>
         <th>#</th>
         <th>Icon</th>
-        <th>Bandera</th>
-        <th>Nombre</th>
+        <th>Flag</th>
+        <th>Name</th>
         <th>Capital</th>
-        <th>Poblacion</th>
+        <th>Population</th>
         <th> </th>
       </tr>
     </thead>
@@ -23,7 +23,7 @@
         <td> {{ country.name.common }} </td>
         <td> {{ country.capital }} </td>
         <td> {{ country.population | number }} </td>
-        <td> <a href="#">See more...</a> </td>
+        <td> <a [routerLink]="['/countries/by', country.cca3]">See more...</a> </td>
       </tr>
     </tbody>
   </table>
